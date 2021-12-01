@@ -10,7 +10,7 @@ class ArticleList extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ListView.builder(
         itemCount: 20,
-        itemBuilder: ( _, i ) => const Article(),
+        itemBuilder: ( _, i ) => const ArticleCard(),
       ),
     );
   }

@@ -1,9 +1,9 @@
 part of 'widgets.dart';
 
 
-class Article extends StatelessWidget {
+class ArticleCard extends StatelessWidget {
   
-  const Article({Key? key}) : super(key: key);
+  const ArticleCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
