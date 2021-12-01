@@ -3,20 +3,25 @@ part of 'widgets.dart';
 
 class ArticleCard extends StatelessWidget {
   
-  const ArticleCard({Key? key}) : super(key: key);
+  final Article article;
+
+  const ArticleCard({
+    Key? key, 
+    required this.article
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
-        _ArticleImage(url: 'https://picsum.photos/seed/picsum/500/300'),
-        _ArticleSourceAndTitle( source: 'The New York Times', title: 'The Coldest Sunset'),
-        _ArticleDescription( description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+      children: [
+        const _ArticleImage(url: 'https://picsum.photos/seed/picsum/500/300'),
+        _ArticleSourceAndTitle( source: article.source.name , title: article.title ),
+        const _ArticleDescription( description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
 
-        SizedBox( height: 10 ),
-        Divider(),
-        SizedBox( height: 20 ),
+        const SizedBox( height: 10 ),
+        const Divider(),
+        const SizedBox( height: 20 ),
       ],
     );
   }
