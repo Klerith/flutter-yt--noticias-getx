@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
+      title: 'Noticias App',
       initialRoute: 'headlines',
       routes: {
         'headlines': (context) => const HeadlinesScreen(),
